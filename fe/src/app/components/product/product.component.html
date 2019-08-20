@@ -1,0 +1,36 @@
+<div class="product-wrapper">
+  <h3>{{product?.name}}</h3>
+  <div class="product-description">
+    <img [src]="product.picture"/>
+    <div class="text-section">
+      <div class="text">
+        {{product.text}}
+      </div>
+      <div class="price">
+        {{product.price}}$
+      </div>
+      <ng-container *ngIf="!isOrdered">
+        <button *ngIf="!isInCart; else cart"
+                mat-raised-button
+                color="primary"
+                (click)="addToCart()">Add</button>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<ng-template #cart>
+  <div class="action-section">
+    <mat-form-field>
+      <input matInput
+             disabled
+             type="number"
+             placeholder="Count"
+             [value]="product.count">
+    </mat-form-field>
+  <button *ngIf="isInCart"
+          mat-raised-button
+          color="warn"
+          (click)="removeFromCart()">Remove</button>
+  </div>
+</ng-template>

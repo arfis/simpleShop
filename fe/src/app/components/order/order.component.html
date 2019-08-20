@@ -1,0 +1,9 @@
+<div class="order-wrapper">
+  <h3>OrderId: <span>{{order._id}}</span></h3>
+  <shopie-product *ngFor="let product of order.products"
+                  [isOrdered]="true"
+                  [product]="product"></shopie-product>
+  <button mat-raised-button
+          color="warn"
+          (click)="removeOrder()">Remove Order</button>
+</div>

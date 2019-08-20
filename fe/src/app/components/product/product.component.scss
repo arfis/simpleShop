@@ -1,0 +1,31 @@
+img {
+  width: 30%;
+  margin: auto;
+}
+
+.product-description {
+  display: flex;
+
+  .price {
+    margin: 10px;
+    font-weight: bold;
+  }
+
+  .text-section {
+    padding-left: 20px;
+
+    button {
+      margin-top: 10px;
+    }
+
+    .action-section {
+      display: flex;
+      align-items: baseline;
+      margin-top: 10px;
+
+      button {
+        margin-left: 10px;
+      }
+    }
+  }
+}

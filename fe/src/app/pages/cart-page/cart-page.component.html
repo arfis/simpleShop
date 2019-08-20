@@ -1,0 +1,15 @@
+<div class="shopping-cart-wrapper">
+  <ng-container *ngIf="shoppingCart.length; else empty">
+    <h2>Items in shopping cart</h2>
+    <shopie-product *ngFor="let product of shoppingCart"
+                    [isInCart]=true
+                    [product]="product"></shopie-product>
+    <button mat-raised-button
+            color="primary"
+            (click)="order()">Order</button>
+  </ng-container>
+</div>
+
+<ng-template #empty>
+  <h1>The shopping cart is empty</h1>
+</ng-template>

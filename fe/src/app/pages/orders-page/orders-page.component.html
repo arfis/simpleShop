@@ -1,0 +1,17 @@
+<div class="orders-wrapper">
+  <h2>Orders</h2>
+  <mat-form-field>
+    <input matInput
+           placeholder="search" [formControl]="orderSearch">
+  </mat-form-field>
+  <ng-template [ngTemplateOutlet]="filteredOrders.length ? orderList : empty"></ng-template>
+</div>
+
+<ng-template #orderList>
+  <shopie-order *ngFor="let order of filteredOrders"
+                [order]="order"></shopie-order>
+</ng-template>
+
+<ng-template #empty>
+  <h2>No orders found!</h2>
+</ng-template>

@@ -1,0 +1,10 @@
+.products-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 40px;
+
+  shopie-product {
+    box-sizing: border-box;
+    padding: 20px 0;
+  }
+}

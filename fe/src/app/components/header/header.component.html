@@ -1,0 +1,16 @@
+<header>
+  <nav>
+    <a class="item"
+       [routerLink]="'products'"
+       routerLinkActive="active"
+    >Products</a>
+    <a class="item"
+       [routerLink]="'orders'"
+       routerLinkActive="active"
+    >Orders</a>
+    <a class="item"
+       [routerLink]="'shopping-cart'"
+       routerLinkActive="active"
+    >Shopping cart ({{shoppingCartLength}})</a>
+  </nav>
+</header>

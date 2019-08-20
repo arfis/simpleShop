@@ -1,4 +1,4 @@
-import { ActionReducer, ActionReducerMap, combineReducers, compose, createSelector, MetaReducer } from '@ngrx/store';
+import { Action, ActionReducer, ActionReducerMap, combineReducers, compose, createSelector, MetaReducer } from '@ngrx/store';
 
 import { localStorageSync } from 'ngrx-store-localstorage';
 import { environment } from '../../../environments/environment';
@@ -10,7 +10,7 @@ export interface State {
   products: fromProducts.State;
 }
 
-export const reducers: ActionReducerMap<State> = {
+export const reducers: ActionReducerMap<any> = {
   products: fromProducts.reducer
 };
 
